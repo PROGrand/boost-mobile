@@ -65,4 +65,9 @@ Setup boost from mingw prompt:
     --with-program_options --with-system --with-thread --with-random \
     --with-regex
 
-  [1]: http://msys2.github.io/
+Use provided CMakeListsBoost.txt in your android project's CMakeLists.txt.
+```
+include(CMakeListsBoost.txt)
+```
+
+[1]: http://msys2.github.io/

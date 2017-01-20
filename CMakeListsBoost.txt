@@ -1,0 +1,66 @@
+IF (NOT DEFINED BOOST_ROOT)
+    SET(BOOST_ROOT G:/boost_1_62_0)
+ENDIF()
+
+IF (NOT DEFINED BOOST_LIB)
+    SET(BOOST_LIB ${BOOST_ROOT}/android/lib)
+ENDIF()
+
+ADD_DEFINITIONS(-DBOOST_THREAD_VERSION=4 -DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_THREAD_PROVIDES_CONDITION -DBOOST_THREAD_PROVIDES_NESTED_LOCKS)
+ADD_DEFINITIONS(-DBOOST_THREAD_PROVIDES_FUTURE -DBOOST_THREAD_PROVIDES_FUTURE_CONTINUATION -DBOOST_THREAD_PROVIDES_EXECUTORS)
+
+include_directories( ${BOOST_ROOT} )
+
+add_library( boost_thread
+             STATIC
+             IMPORTED )
+
+set_target_properties(
+    boost_thread
+    PROPERTIES IMPORTED_LOCATION
+    ${BOOST_LIB}/libboost_thread_pthread-clang-mt-s-1_62.a )
+
+add_library( boost_system
+         STATIC
+         IMPORTED )
+
+set_target_properties(
+	boost_system
+	PROPERTIES IMPORTED_LOCATION
+	${BOOST_LIB}/libboost_system-clang-mt-s-1_62.a )
+
+add_library( boost_chrono
+         STATIC
+         IMPORTED )
+
+set_target_properties(
+        boost_chrono
+        PROPERTIES IMPORTED_LOCATION
+        ${BOOST_LIB}/libboost_chrono-clang-mt-s-1_62.a )
+
+add_library( boost_atomic
+         STATIC
+         IMPORTED )
+
+set_target_properties(
+        boost_atomic
+        PROPERTIES IMPORTED_LOCATION
+        ${BOOST_LIB}/libboost_atomic-clang-mt-s-1_62.a )
+
+add_library( boost_program_options
+         STATIC
+         IMPORTED )
+
+set_target_properties(
+        boost_program_options
+        PROPERTIES IMPORTED_LOCATION
+        ${BOOST_LIB}/libboost_program_options-clang-mt-s-1_62.a )
+
+add_library( boost_random
+         STATIC
+         IMPORTED )
+
+set_target_properties(
+        boost_random
+        PROPERTIES IMPORTED_LOCATION
+        ${BOOST_LIB}/libboost_random-clang-mt-s-1_62.a )

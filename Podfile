@@ -4,10 +4,10 @@ use_frameworks!
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-project 'MGStream/MGStream.xcodeproj'
+project 'boost-test/boost-test.xcodeproj'
 
-target "MGStream" do
+target "boost-test" do
 
-pod 'boost', path: '/work/boost_1_63_0'
+pod 'boost', path: '/path/to/boost_1_63_0'
 
 end

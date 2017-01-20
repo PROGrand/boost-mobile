@@ -1,5 +1,5 @@
 IF (NOT DEFINED BOOST_ROOT)
-    SET(BOOST_ROOT G:/boost_1_62_0)
+    SET(BOOST_ROOT C:/boost_1_63_0)
 ENDIF()
 
 IF (NOT DEFINED BOOST_LIB)
@@ -18,7 +18,7 @@ add_library( boost_thread
 set_target_properties(
     boost_thread
     PROPERTIES IMPORTED_LOCATION
-    ${BOOST_LIB}/libboost_thread_pthread-clang-mt-s-1_62.a )
+    ${BOOST_LIB}/libboost_thread_pthread-clang-mt-s-1_63.a )
 
 add_library( boost_system
          STATIC
@@ -27,7 +27,7 @@ add_library( boost_system
 set_target_properties(
 	boost_system
 	PROPERTIES IMPORTED_LOCATION
-	${BOOST_LIB}/libboost_system-clang-mt-s-1_62.a )
+	${BOOST_LIB}/libboost_system-clang-mt-s-1_63.a )
 
 add_library( boost_chrono
          STATIC
@@ -36,7 +36,7 @@ add_library( boost_chrono
 set_target_properties(
         boost_chrono
         PROPERTIES IMPORTED_LOCATION
-        ${BOOST_LIB}/libboost_chrono-clang-mt-s-1_62.a )
+        ${BOOST_LIB}/libboost_chrono-clang-mt-s-1_63.a )
 
 add_library( boost_atomic
          STATIC
@@ -45,7 +45,7 @@ add_library( boost_atomic
 set_target_properties(
         boost_atomic
         PROPERTIES IMPORTED_LOCATION
-        ${BOOST_LIB}/libboost_atomic-clang-mt-s-1_62.a )
+        ${BOOST_LIB}/libboost_atomic-clang-mt-s-1_63.a )
 
 add_library( boost_program_options
          STATIC
@@ -54,7 +54,7 @@ add_library( boost_program_options
 set_target_properties(
         boost_program_options
         PROPERTIES IMPORTED_LOCATION
-        ${BOOST_LIB}/libboost_program_options-clang-mt-s-1_62.a )
+        ${BOOST_LIB}/libboost_program_options-clang-mt-s-1_63.a )
 
 add_library( boost_random
          STATIC
@@ -63,4 +63,4 @@ add_library( boost_random
 set_target_properties(
         boost_random
         PROPERTIES IMPORTED_LOCATION
-        ${BOOST_LIB}/libboost_random-clang-mt-s-1_62.a )
+        ${BOOST_LIB}/libboost_random-clang-mt-s-1_63.a )
